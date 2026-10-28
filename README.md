@@ -9,12 +9,9 @@ MaxAuth is a modern successor to JPremium. Version 1.0 replaces the earlier MaxA
 ## Download and documentation
 
 - [Download MaxAuth on SpigotMC](https://www.spigotmc.org/resources/135024/)
-- [English wiki](https://github.com/djnejk/MaxAuth_public/wiki)
-- [Česká wiki](https://github.com/djnejk/MaxAuth_public/wiki/MaxAuth-Wiki-(CZ))
-- [Authentication Flow](https://github.com/djnejk/MaxAuth_public/wiki/Authentication-Flow)
-- [Authentication Recovery](https://github.com/djnejk/MaxAuth_public/wiki/Authentication-Recovery)
-- [Data Migration](https://github.com/djnejk/MaxAuth_public/wiki/Data-Migration)
-- [Runtime Libraries](https://github.com/djnejk/MaxAuth_public/wiki/Runtime-Libraries)
+- [English wiki](https://github.com/djnejk/MaxAuth_public/wiki/01-%7C-MaxAuth-Wiki)
+- [Česká wiki](https://github.com/djnejk/MaxAuth_public/wiki/CZ_01-%7C-MaxAuth-Wiki)
+- [Data Migration](https://github.com/djnejk/MaxAuth_public/wiki/02-%7C-Data-Migration)
 - [Issues and feature requests](https://github.com/djnejk/MaxAuth_public/issues)
 
 ## Architecture
@@ -133,11 +130,11 @@ restrictedInteractions: true
 stateMessageTimeoutSeconds: 10
 ```
 
-The generated files contain comments for every setting. The full reference is maintained in the [English wiki](https://github.com/djnejk/MaxAuth_public/wiki).
+The generated files contain comments for every setting. The full reference is maintained in the [English wiki](https://github.com/djnejk/MaxAuth_public/wiki/01-%7C-MaxAuth-Wiki).
 
 ## Data migration
 
-The production plugin does not contain MaxAuth BETA or JPremium row importers. Conversion is handled by the separate **MaxAuth Migration Tool** described in [Data Migration](https://github.com/djnejk/MaxAuth_public/wiki/Data-Migration).
+The production plugin does not contain MaxAuth BETA or JPremium row importers. Conversion is handled by the separate **MaxAuth Migration Tool** described in [Data Migration](https://github.com/djnejk/MaxAuth_public/wiki/02-%7C-Data-Migration).
 
 Run migration only while the network is closed, keep a restorable backup, rehearse against staging first, and validate the result with `/maxauth authaudit`. The old `storageTableName` option is only a legacy-configuration detector. Any non-empty value blocks startup before the new storage opens; after verified migration it must be `storageTableName: ''`.
 
